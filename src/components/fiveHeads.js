@@ -4,7 +4,7 @@ const fiveHeads = () => {
   return new Promise((resolve, reject) => {
     let headsCount = 0;
     let attempts = 0;
-    while (headsCount < 5) {
+    while (headsCount < 5 && attempts < 100) {
       attempts++;
       let result = tossCoin();
       if (result === "heads") {
